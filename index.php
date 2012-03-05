@@ -3,23 +3,17 @@
 //Don't enable on production
 error_reporting(E_ALL | E_STRICT);
 
-//$_ENV['external-db.s109497.gridserver.com'];
+$_ENV['internal-db.s109497.gridserver.com'];
 
-//require_once('config.php');
+require_once('config.php');
 
-/*
 $host = DB_HOST;
 $user = DB_USER;
 $pass = DB_PASSWORD;
-$db = DB_DATABASE;*/
-
-$host = 'external-db.s109497.gridserver.com';
-$user = 'db109497_caruser';
-$pass = 'cs2102db';
-$db = 'db109497_cs2102';
+$db = DB_DATABASE;
 
 //Open a connection to the mysql server
-$link = mysql_connect("internal-db.s109497.gridserver.com", "db109497_caruser", "cs2102db");
+$link = mysql_connect($host, $user, $pass);
 if(!$link) {
 	print('Failed to establish connection to mysql server!');
 	exit();
