@@ -8,4 +8,4 @@ A quick and easy database for car manufacturers, dealerships and rental agencies
 
 
 ### Contributing Members
-Joey Cody, Ah Bang, Guillaume Chartron, Christabel Sabina Warouw & Juliette.
+Ah Bang, Guillaume Chartron, Christabel Sabina Warouw, Juliette & Joey Cody.
