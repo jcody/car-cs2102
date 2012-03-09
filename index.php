@@ -31,8 +31,13 @@
         <div class="span9">
           <div class="hero-unit">
             <h1>Hello, world!</h1>
+            
+            	<label>Search our car catalogue</label>
+	            <input type="text" name="search" placeholder="Search" class="search">
+	            <input class="btn-primary" type="submit" value="SEEEarch">
+            
             <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+            
           </div>
           <div class="row-fluid">
             <div class="span4">
@@ -71,7 +76,7 @@
         </div><!--/span-->
       </div><!--/row-->
 
-      <?php include('includes/footer.php'); ?>
+      <?php include('includes/footer.php'); ?> 
 
     </div><!--/.fluid-container-->
     
