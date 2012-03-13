@@ -9,11 +9,12 @@
       <a class="brand" href="#">Car Catalogue</a>
       <div class="nav-collapse">
         <ul class="nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="active"><a href="#">All Cars</a></li>
+          <li><a href="#about">New Cars</a></li>
+          <li><a href="#contact">Rental Cars</a></li>
+		<li><a href="#contact">Repair Car</a></li>
         </ul>
-        <p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>
+        <p class="navbar-text pull-right">Logged in as <i class="icon-user icon-white"></i> <a href="#">Administrator</a></p>
       </div><!--/.nav-collapse -->
     </div>
   </div>
