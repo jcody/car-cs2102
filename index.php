@@ -30,7 +30,8 @@
         
         <div class="span9">
           <div class="hero-unit">
-            <h1>Get A Car</h1>
+            <h1>Get A Car.</h1>
+			<br />
             <form>
 	            <input type="text" name="search" placeholder="Search" class="search">
 	            <input class="btn-primary" type="submit" value="Search">
