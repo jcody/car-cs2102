@@ -26,27 +26,33 @@
           <div class="hero-unit">
             <h1>Get A Car.</h1>
 			<br />
-            <form>
-	            <input type="text" name="search" placeholder="Search" class="search">
-	            <input class="btn-primary" type="submit" value="Search">
+			<tr>
+				<td>hi</td>
+				<td>goodbye</td>
+				<td>testing</td>
+			</tr>
+            <form class="form-inline" action="functions.php" method="post">
+	            <input type="text" name="search_query" placeholder="Search" class="search">
+	            <input class="btn btn-primary" type="submit" value="Search">
 	            <a class="btn btn-small" href="#"><i class="icon-cog"></i> Advanced</a>
             </form>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <br>
+            <p>Whether you are browsing, renting or fixing you next car, we have all the data you can possibly need to make the best choice. Search our wide variety of cars and narrow your search by price, type, color and more.</p>
             
           </div>
           <div class="row-fluid">
             <div class="span4">
-              <h2>Heading</h2>
+              <h2>Browse.</h2>
               <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
               <p><a class="btn" href="#">View details &raquo;</a></p>
             </div><!--/span-->
             <div class="span4">
-              <h2>Heading</h2>
+              <h2>Rent.</h2>
               <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
               <p><a class="btn" href="#">View details &raquo;</a></p>
             </div><!--/span-->
             <div class="span4">
-              <h2>Heading</h2>
+              <h2>Fix.</h2>
               <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
               <p><a class="btn" href="#">View details &raquo;</a></p>
             </div><!--/span-->

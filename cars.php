@@ -11,6 +11,43 @@
     <!-- Le php scripts -->
     <?php require_once('functions.php'); ?>
     
+    <!-- Le magic JS search -->
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+	  $("#search_button").click(function() {
+	      // getting the value that user typed
+	      var searchString = $("#search_box").val();
+	
+	      // forming the queryString
+	      var data = 'search='+ searchString;
+	      
+	      // if searchString is not empty
+	      if(searchString) {
+	          // ajax call
+	          $.ajax({
+	              type: "POST",
+	              url: "search.php",
+	              data: data,
+	              beforeSend: function(html) { // this happens before actual call
+	              	console.log("SUCCESS 1");
+	                  $("#results").html('');
+	                  $("#searchresults").show();
+	                  $(".word").html(searchString);
+	             },
+	             success: function(html){ // this happens after we get results
+		             console.log("close...");
+		             console.log(html);
+	                  $("#results").show();
+	                  $("#results").append(html);
+	            }
+	          });
+	      }
+	      return false;
+	  });
+	});
+	</script>
+    
   </head>
   <body>
 
@@ -20,19 +57,17 @@
       <div class="row-fluid">
 	      <?php include('includes/sidebar.php'); ?>
 	      <div class="span9">
-	      	<table class="table table-striped table-bordered">
-			  <thead>
-			    <tr>
-			      <th>Model</th>
-			      <th>Manufacturer</th>
-			    </tr>
-			  </thead>
-			  <tbody>
-			    <?php all_cars(); ?>
-			  </tbody>
-			</table>
-	      </div>
-      
+	      <form class="well form-inline" action="search.php" method="post">
+	            <input type="text" name="search_query" placeholder="Search" id="search_box" class="search">
+	            <input id="search_button" class="btn btn-primary" type="submit" value="Search">
+	            <a class="btn btn-small" href="#"><i class="icon-cog"></i> Advanced</a>
+          </form>
+          
+          <div id="searchresults">Search results for <span class="word"></span></div>
+            
+	      	<?php all_cars(); ?>
+			
+	      </div><!--/.span9 -->
       </div><!--/.row-fluid-->
       
      <?php include('includes/footer.php'); ?> 
@@ -41,19 +76,8 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap-transition.js"></script>
     <script src="js/bootstrap-alert.js"></script>
-    <script src="js/bootstrap-modal.js"></script>
-    <script src="js/bootstrap-dropdown.js"></script>
-    <script src="js/bootstrap-scrollspy.js"></script>
-    <script src="js/bootstrap-tab.js"></script>
-    <script src="js/bootstrap-tooltip.js"></script>
-    <script src="js/bootstrap-popover.js"></script>
     <script src="js/bootstrap-button.js"></script>
-    <script src="js/bootstrap-collapse.js"></script>
-    <script src="js/bootstrap-carousel.js"></script>
-    <script src="js/bootstrap-typeahead.js"></script>
-
+    
   </body>
 </html>
