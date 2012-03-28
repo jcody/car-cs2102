@@ -7,7 +7,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Enriqueta:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     
     <!-- Le php scripts -->
     <?php require_once('functions.php'); ?>
@@ -27,13 +27,14 @@
       <div class="row-fluid">
 	      <?php include('includes/sidebar.php'); ?>
 	      <div class="span9">
+	      <h1 class="main-call search">Search All Cars</h1>
 	      <form class="well form-inline" action="search.php" method="post">
 	            <input type="text" name="search_query" placeholder="Search" id="search_box" class="search">
 	            <input id="search_button" class="btn btn-primary" type="submit" value="Search">
 	            <a class="btn btn-small" href="#"><i class="icon-cog"></i> Advanced</a>
           </form>
           
-          <div id="searchresults">Search results for <span class="word"></span></div>
+          <blockquote><p id="searchresults">Search results for: <span class="word"></span></p></blockquote>
             
 	      	<table class="table table-striped table-bordered">
 			  <thead>

@@ -9,7 +9,7 @@
       <a class="brand main-call" href="#">Car Catalogue</a>
       <div class="nav-collapse">
         <ul class="nav">
-          <li class="active"><a href="#">All Cars</a></li>
+          <li class="active"><a href="cars.php">All Cars</a></li>
           <li><a href="#about">New Cars</a></li>
           <li><a href="#contact">Rental Cars</a></li>
 		<li><a href="#contact">Repair Car</a></li>
