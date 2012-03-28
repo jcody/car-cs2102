@@ -7,6 +7,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     
     <!-- Le php scripts -->
     <?php require_once('functions.php'); ?>
@@ -24,13 +25,8 @@
         
         <div class="span9">
           <div class="hero-unit">
-            <h1>Get A Car.</h1>
+            <h1 class="main-call">Get A Car.</h1>
 			<br />
-			<tr>
-				<td>hi</td>
-				<td>goodbye</td>
-				<td>testing</td>
-			</tr>
             <form class="form-inline" action="functions.php" method="post">
 	            <input type="text" name="search_query" placeholder="Search" class="search">
 	            <input class="btn btn-primary" type="submit" value="Search">
@@ -42,19 +38,38 @@
           </div>
           <div class="row-fluid">
             <div class="span4">
-              <h2>Browse.</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
+              <h2 class="sub-call">Browse.</h2>
+              <ul class="thumbnails">
+				  <li class="span3">
+				    <div class="thumbnail">
+				      <img src="http://placehold.it/260x180" alt=""><br>
+				      <p><a class="btn" href="#">View Cars &raquo;</a></p>
+				    </div>
+				  </li>
+				</ul>
+              
             </div><!--/span-->
             <div class="span4">
-              <h2>Rent.</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
+              <h2 class="sub-call">Rent.</h2>
+              <ul class="thumbnails">
+				  <li class="span3">
+				    <div class="thumbnail">
+				      <img src="http://placehold.it/260x180" alt=""><br>
+				      <p><a class="btn" href="#">Rent A Car &raquo;</a></p>
+				    </div>
+				  </li>
+				</ul>
             </div><!--/span-->
             <div class="span4">
-              <h2>Fix.</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
+              <h2 class="sub-call">Fix.</h2>
+              <ul class="thumbnails">
+				  <li class="span3">
+				    <div class="thumbnail">
+				      <img src="http://placehold.it/260x180" alt=""><br>
+				      <p><a class="btn" href="#">Mechanics &raquo;</a></p>
+				    </div>
+				  </li>
+				</ul>
             </div><!--/span-->
           </div><!--/row-->
         </div><!--/span-->

@@ -9,3 +9,14 @@ body {
 .sidebar-nav {
 	padding: 9px 0;
 }
+
+.main-call {
+	font-family: 'Open Sans', sans-serif;
+	font-weight:700;
+}
+
+.sub-call {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	font-weight:400;
+}

@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="#">Car Catalogue</a>
+      <a class="brand main-call" href="#">Car Catalogue</a>
       <div class="nav-collapse">
         <ul class="nav">
           <li class="active"><a href="#">All Cars</a></li>

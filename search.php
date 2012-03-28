@@ -17,34 +17,19 @@ if(isset($_POST['search_query'])) {
 	//Inputted search term from submitted search boxes
 	$search_query = $_POST['search_query'];
 	
-	//Return value
-	$sr = '';
 	
 	//Search for a specific make OR specific model
 	if ($result = $mysqli->query("SELECT make, model, engine, type FROM models WHERE model LIKE '%$search_query%' OR make LIKE '%$search_query%'")) {
-		//Formatted for HTML table output
-		//NOT an elegant piece of code, but hack to render the dynamic table properly
-		//otherwise <tr> and <td> elements won't render in search_query
-		$sr .= '<table class="table table-striped table-bordered">
-				  <thead>
-				    <tr>
-				      <th>Model</th>
-				      <th>Manufacturer</th>
-				      <th>Engine</th>
-				      <th>Type</th>
-				    </tr>
-				  </thead>
-				  <tbody id="results" class="update">';
-		while ($row = $result->fetch_object()) {
-			//Output a table entry for every row in db
-			$sr .= '<tr><td>'.$row->model.'</td><td>'.$row->make.'</td><td>'.$row->engine.'</td><td>'.$row->type.'</td></tr>';
+		$count = 0;
+		$arr = array();
+		while ($row = $result->fetch_assoc()) {
+			$count++;
+			
+			//Formatted for HTML table output
+			$arr(count) = $row['model'] . $row['make'] . $row['engine'] . $row['type'];
 		}
-		//Finish table structure
-		$sr .= '</tbody>';
-		$sr .= '</table>';
-	
-	echo $sr;
-		
+		echo json_encode($arr());
+
 	} else 
 		echo $mysqli->error;
 }

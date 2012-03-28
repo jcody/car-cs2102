@@ -7,6 +7,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Enriqueta:700' rel='stylesheet' type='text/css'>
     
     <!-- Le php scripts -->
     <?php require_once('functions.php'); ?>
@@ -14,38 +15,7 @@
     <!-- Le magic JS search -->
     <script src="js/jquery.min.js"></script>
     <script type="text/javascript">
-    $(function() {
-	  $("#search_button").click(function() {
-	      // getting the value that user typed
-	      var searchString = $("#search_box").val();
-	
-	      // forming the queryString
-	      var data = 'search='+ searchString;
-	      
-	      // if searchString is not empty
-	      if(searchString) {
-	          // ajax call
-	          $.ajax({
-	              type: "POST",
-	              url: "search.php",
-	              data: data,
-	              beforeSend: function(html) { // this happens before actual call
-	              	console.log("SUCCESS 1");
-	                  $("#results").html('');
-	                  $("#searchresults").show();
-	                  $(".word").html(searchString);
-	             },
-	             success: function(html){ // this happens after we get results
-		             console.log("close...");
-		             console.log(html);
-	                  $("#results").show();
-	                  $("#results").append(html);
-	            }
-	          });
-	      }
-	      return false;
-	  });
-	});
+
 	</script>
     
   </head>
@@ -65,7 +35,19 @@
           
           <div id="searchresults">Search results for <span class="word"></span></div>
             
-	      	<?php all_cars(); ?>
+	      	<table class="table table-striped table-bordered">
+			  <thead>
+			    <tr>
+			      <th>Model</th>
+			      <th>Manufacturer</th>
+			      <th>Engine</th>
+			      <th>Type</th>
+			    </tr>
+			  </thead>
+			  <tbody id="results" class="update">
+			    <?php all_cars(); ?>
+			  </tbody>
+			</table>
 			
 	      </div><!--/.span9 -->
       </div><!--/.row-fluid-->
